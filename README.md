@@ -1,6 +1,6 @@
 # Student Information System (SIS)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.4.
+This project is based on PrimeNG [Sakai template](https://github.com/primefaces/sakai-ng) v ~17.0.0.
 
 ## Development server
 
