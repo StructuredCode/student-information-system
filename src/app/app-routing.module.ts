@@ -5,6 +5,9 @@ import { AppLayoutComponent } from "./layout/app.layout.component";
 const routes: Routes = [
     {
         path: '', component: AppLayoutComponent,
+        children: [
+            { path:'', loadComponent: () => import('./overview/overview.component').then(c => c.OverviewComponent) }
+        ]
     },
     { path: '**', redirectTo: '/' },
 ]

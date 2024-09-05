@@ -1,0 +1,67 @@
+<div class="grid">
+    <div class="col-12">
+        <div class="card px-3 py-3">
+
+            <p-table
+                [value]="students()"
+                [paginator]="true"
+                [rows]="20"
+                dataKey="id"
+            >
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th style="width: 3rem"></th>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th></th>
+                    </tr>
+                </ng-template>
+                <ng-template
+                    pTemplate="body"
+                    let-student
+                    let-expanded="expanded"
+                >
+                    <tr>
+                        <td>
+                            <button
+                                type="button"
+                                pButton
+                                pRipple
+                                [pRowToggler]="student"
+                                class="p-button-text p-button-rounded p-button-plain"
+                                [icon]="
+                                    expanded
+                                        ? 'pi pi-chevron-up'
+                                        : 'pi pi-chevron-down'
+                                "
+                            ></button>
+                        </td>
+                        <td>{{ student.id }}</td>
+                        <td>
+                            {{ student.first_name + " " + student.last_name }}
+                        </td>
+                        <td>{{ student.age }}</td>
+                        <td>{{ student.email }}</td>
+                        <td>{{ student.gender }}</td>
+                       
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="rowexpansion" let-student>
+                    <tr>
+                        <td colspan="12">
+                            <div class="card flex justify-content-around">
+                                <div *ngFor="let course of courseList" class="flex align-items-center">
+                                    <input type="checkbox" [checked]="student.courses.includes(course.value)" [id]="course.value" (change)="onCourseChangeEvent($event, student, course)"/>
+                                    <label [for]="course.value">{{ course.value }}</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>
