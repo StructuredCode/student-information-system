@@ -1,24 +1,24 @@
 {
     "data": [
         {
-            "value": 1,
-            "label": "'MATH'"
+            "value": "MATH",
+            "name": "MATH"
         },
         {
-            "value": 2,
-            "label": "'ENG'"
+            "value": "ENG",
+            "name": "ENG"
         },
         {
-            "value": 3,
-            "label": "'SCI'"
+            "value": "SCI",
+            "name": "SCI"
         },
         {
-            "value": 4,
-            "label": "'CS'"
+            "value": "CS",
+            "name": "CS"
         },
         {
-            "value": 5,
-            "label": "'HS'"
+            "value": "HS",
+            "name": "HS"
         }
     ]
 }
