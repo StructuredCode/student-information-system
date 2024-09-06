@@ -1,0 +1,8 @@
+::ng-deep .p-datatable .p-datatable-thead > tr > th {
+    background: var(--mk-background-color);
+    color: var(--mk-text-color);
+}
+
+::ng-deep .p-datatable .p-sortable-column .p-sortable-column-icon {
+    color: var(--mk-text-color);
+}
