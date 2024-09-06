@@ -22,6 +22,6 @@ export class AppTopBarComponent implements OnInit {
     constructor(public layoutService: LayoutService) { }
 
     ngOnInit(): void {
-        this.items = [{ label: 'Logout', icon: 'pi pi-sign-out', command: () => { } }]
+        this.items = [{ label: 'Logout', icon: 'pi pi-sign-out', command: () => { this.authService.logout() } }]
     }
 }
