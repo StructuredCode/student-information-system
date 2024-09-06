@@ -6,6 +6,8 @@
                 [paginator]="true"
                 [rows]="20"
                 dataKey="id"
+                [showCurrentPageReport]="true"
+                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
             >
                 <ng-template pTemplate="header">
                     <tr>
@@ -115,7 +117,6 @@
                         </div>
                     </div>
                 </ng-template>
-    
                 <ng-template pTemplate="footer">
                     <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
                     <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text" (click)="saveStudent()"></button>
