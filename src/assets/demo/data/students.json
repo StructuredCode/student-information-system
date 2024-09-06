@@ -1,6 +1,6 @@
 {
-    "data": [{"id":1,"first_name":"Simon","last_name":"Paoloni","age":30,"email":"spaoloni0@businessweek.com","gender":"Male","courses":["HS","CS","MATH","SCI","ENG"]},
-    {"id":2,"first_name":"Cesaro","last_name":"Goodrich","age":22,"email":"cgoodrich1@skype.com","gender":"Male","courses":["HS","SCI","ENG","MATH","CS"]},
+    "data": [{"id":1,"first_name":"Simon","last_name":"Paoloni","age":30,"email":"spaoloni0@businessweek.com","gender":"Male","courses":["HS","CS","SCI","ENG"]},
+    {"id":2,"first_name":"Cesaro","last_name":"Goodrich","age":22,"email":"cgoodrich1@skype.com","gender":"Male","courses":["HS","SCI","MATH","CS"]},
     {"id":3,"first_name":"Manya","last_name":"Winterflood","age":28,"email":"mwinterflood2@senate.gov","gender":"Female","courses":["MATH","ENG"]},
     {"id":4,"first_name":"Morgan","last_name":"Van de Velde","age":24,"email":"mvandevelde3@so-net.ne.jp","gender":"Male","courses":["HS","CS","MATH"]},
     {"id":5,"first_name":"Pedro","last_name":"Wahlberg","age":18,"email":"pwahlberg4@cmu.edu","gender":"Non-binary","courses":["HS","CS","SCI"]},
