@@ -54,7 +54,7 @@
                         </td>
                         <td>{{ student.age }}</td>
                         <td>{{ student.email }}</td>
-                        <td>{{ student.gender }}</td>
+                        <td><span [class]="'student-badge gender-' + student.gender.toString().toLowerCase()">{{ student.gender }}</span></td>
                         <td>
                             <div class="flex">
                                 <button
