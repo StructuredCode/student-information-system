@@ -18,6 +18,7 @@ This Angular project implements a simple **Student Information System** using Pr
 ###### 4. Delete student
 
 This project is based on PrimeNG [Sakai template](https://github.com/primefaces/sakai-ng) v. ~17.0.0.
+
 Mock data was generated using [www.mockaroo.com](https://www.mockaroo.com/).
 
 ## Prerequisites
