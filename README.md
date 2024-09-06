@@ -16,6 +16,7 @@ This Angular project implements a simple **Student Information System** using Pr
 ###### 2. Image click will open menu with Logout option
 ###### 3. Add new student
 ###### 4. Delete student
+###### 5. Show/Edit student courses
 
 This project is based on PrimeNG [Sakai template](https://github.com/primefaces/sakai-ng) v. ~17.0.0.
 
