@@ -17,6 +17,8 @@ import { AppFooterComponent } from './app.footer.component';
 import { AppConfigModule } from './config/config.module';
 import { AppSidebarComponent } from "./app.sidebar.component";
 import { AppLayoutComponent } from "./app.layout.component";
+import { MenuModule } from 'primeng/menu';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({ declarations: [
         AppMenuitemComponent,
@@ -36,5 +38,7 @@ import { AppLayoutComponent } from "./app.layout.component";
         InputSwitchModule,
         RippleModule,
         RouterModule,
+        MenuModule,
+        ButtonModule,
         AppConfigModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppLayoutModule { }

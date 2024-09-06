@@ -1,14 +1,17 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { LayoutService } from "./service/app.layout.service";
+import { AuthService } from '../service/auth.service';
 
 @Component({
     selector: 'app-topbar',
     templateUrl: './app.topbar.component.html'
 })
-export class AppTopBarComponent {
+export class AppTopBarComponent implements OnInit {
 
-    items!: MenuItem[];
+    authService = inject(AuthService);
+
+    items: MenuItem[] | undefined;
 
     @ViewChild('menubutton') menuButton!: ElementRef;
 
@@ -17,4 +20,8 @@ export class AppTopBarComponent {
     @ViewChild('topbarmenu') menu!: ElementRef;
 
     constructor(public layoutService: LayoutService) { }
+
+    ngOnInit(): void {
+        this.items = [{ label: 'Logout', icon: 'pi pi-sign-out', command: () => { } }]
+    }
 }
