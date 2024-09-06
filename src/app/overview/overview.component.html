@@ -92,7 +92,7 @@
                     </div>
                     <div class="field">
                         <label for="surename">Surename</label>
-                        <input type="text" pInputText id="surename" [(ngModel)]="newStudent.last_name" required autofocus [ngClass]="{'ng-invalid ng-dirty' : submitted() && !newStudent.last_name}"/>
+                        <input type="text" pInputText id="surename" [(ngModel)]="newStudent.last_name" required [ngClass]="{'ng-invalid ng-dirty' : submitted() && !newStudent.last_name}"/>
                         <small class="ng-dirty ng-invalid" *ngIf="submitted() && !newStudent.last_name">Surename is required.</small>
                     </div>
                     <div class="field">
@@ -100,8 +100,13 @@
                         <p-inputNumber id="age" [(ngModel)]="newStudent.age"></p-inputNumber>
                     </div>
                     <div class="field">
+                        <label for="gender">Gender</label>
+                        <p-dropdown [options]="genders" [(ngModel)]="newStudent.gender" placeholder="Select a gender" />
+                        <small class="ng-dirty ng-invalid" *ngIf="submitted() && !newStudent.gender">Gender is required.</small>
+                    </div>
+                    <div class="field">
                         <label for="email">Email</label>
-                        <input type="text" pInputText id="email" [(ngModel)]="newStudent.email" required autofocus [ngClass]="{'ng-invalid ng-dirty' : submitted() && !newStudent.email}"/>
+                        <input type="text" pInputText id="email" [(ngModel)]="newStudent.email" required [ngClass]="{'ng-invalid ng-dirty' : submitted() && !newStudent.email}"/>
                         <small class="ng-dirty ng-invalid" *ngIf="submitted() && !newStudent.email">Email is required.</small>
                     </div>
                     <label for="courses">Courses</label>

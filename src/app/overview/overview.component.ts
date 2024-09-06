@@ -16,11 +16,12 @@ import { InputTextModule } from 'primeng/inputtext';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { RippleModule } from 'primeng/ripple';
+import { DropdownModule } from 'primeng/dropdown';
 
 @Component({
   selector: 'app-overview',
   standalone: true,
-  imports: [CommonModule, TableModule, ToastModule, ToolbarModule, ButtonModule, CheckboxModule, DialogModule, FormsModule, ReactiveFormsModule, InputTextModule, RadioButtonModule, InputNumberModule, RippleModule],
+  imports: [CommonModule, TableModule, ToastModule, ToolbarModule, ButtonModule, CheckboxModule, DialogModule, FormsModule, ReactiveFormsModule, InputTextModule, RadioButtonModule, InputNumberModule, RippleModule, DropdownModule],
   providers: [StudentService],
   templateUrl: './overview.component.html',
   styleUrl: './overview.component.scss'
@@ -34,6 +35,7 @@ export class OverviewComponent implements OnInit {
   submitted = model(false);
   courseList = <Course[]>[];
   newStudent = {} as Student;
+  genders = [];
 
   constructor() {
     effect(() => console.debug('Signal state changed: ', this.students()));
@@ -42,6 +44,7 @@ export class OverviewComponent implements OnInit {
   ngOnInit(): void {
     this.courseService.getCourses().subscribe(c => this.courseList = c);
     this.studentService.getStudents().subscribe(s => this.students.set(s));
+    this.genders = [ 'male', 'female']
   }
 
   onDeleteStudentEvent(student: Student) {
@@ -56,8 +59,8 @@ export class OverviewComponent implements OnInit {
   }
 
   isValid(student: Student): boolean {
-    // TODO: Move to validators and write unit test!
-    return !!student.first_name && !!student.last_name && !!student.email;
+    // TODO: Move to validators and write unit test! #US3548
+    return !!student.first_name && !!student.last_name && !!student.email && !!student.gender;
   }
 
   saveStudent() {
